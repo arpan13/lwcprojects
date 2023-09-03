@@ -1,0 +1,23 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="alarm-card">
+        <h1>Alarm Clock</h1>
+        <!-- image -->
+        <img src={clockImage} alt="Clock Image" height="200px" width="200px" class={shakeImage}>
+        <h2>{currentTime}</h2>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+                <c-clock-drop-down label="Hours" options={hours} unique-id="select-hour" onoptionhandler={optionHandler}></c-clock-drop-down>
+            </div>
+            <div class="slds-col">
+                <c-clock-drop-down label="Mins" options={mins} unique-id="select-min" onoptionhandler={optionHandler}></c-clock-drop-down>
+            </div>
+            <div class="slds-col">
+                <c-clock-drop-down label="AM/PM" options={meridians} unique-id="select-ampm" onoptionhandler={optionHandler}></c-clock-drop-down>
+                </div>
+        </div>
+        <button disabled={isFieldNotSelected} class="slds-button slds-button_neutral slds-button_stretch" onclick={setAlarmHandler} if:false={isAlarmSet}>Set Alarm</button>
+        <button  class="slds-button slds-button_neutral slds-button_stretch" onclick={clearAlarmHandler} if:true={isAlarmSet}>Clear Alarm</button>
+    </div>
+    
+</template>
