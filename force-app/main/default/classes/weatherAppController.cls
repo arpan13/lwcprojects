@@ -9,7 +9,6 @@ public with sharing class weatherAppController {
     }
 
     public static string getKey(){
-        String key ='c5e83120ba549c02da1de296dd3ca8ff';
         return key;
     }
 
