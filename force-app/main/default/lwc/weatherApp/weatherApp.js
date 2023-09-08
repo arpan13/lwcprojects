@@ -1,7 +1,6 @@
 import { LightningElement } from 'lwc';
 import WEATHER_ICONS from '@salesforce/resourceUrl/weatherAppIcons';
 import getWeatherDetails from '@salesforce/apex/weatherAppController.getWeatherDetails';
-const API_KEY = 'c5e83120ba549c02da1de296dd3ca8ff';
 export default class WeatherApp extends LightningElement {
 
     clearIcon = WEATHER_ICONS + '/weatherAppIcons/clear.svg'
